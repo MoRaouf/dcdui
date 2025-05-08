@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Building, GraduationCap, UniversalAccess, FilePdf, Download } from 'lucide-react';
+import { Users, Building, GraduationCap, Accessibility, FileText, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const About = () => {
@@ -237,7 +237,7 @@ const About = () => {
                   
                   <div className="flex items-start">
                     <div className="w-10 h-10 bg-dcd-purple rounded-full flex items-center justify-center text-white mr-4 mt-1 flex-shrink-0">
-                      <UniversalAccess className="h-5 w-5" />
+                      <Accessibility className="h-5 w-5" />
                     </div>
                     <div>
                       <h4 className="font-bold text-dcd-purple mb-1">Accessible Infrastructure</h4>
@@ -254,7 +254,7 @@ const About = () => {
                   <Button 
                     className="bg-dcd-purple text-white hover:bg-dcd-purple-dark"
                   >
-                    <FilePdf className="h-4 w-4 mr-2" />
+                    <FileText className="h-4 w-4 mr-2" />
                     Download Strategy
                   </Button>
                 </div>
