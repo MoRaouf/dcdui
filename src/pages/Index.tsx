@@ -2,15 +2,15 @@
 import React, { useState, useEffect } from "react";
 import { 
   Award, 
-  HandsHelping, 
+  HandHelping, 
   Lightbulb, 
   Building, 
   Users, 
   GraduationCap, 
   ArrowRight, 
-  TextHeight, 
+  Type, 
   CircleDot, 
-  VolumeUp, 
+  Volume, 
   Languages, 
   Menu, 
   Check
@@ -74,13 +74,13 @@ const Index = () => {
       {/* Accessibility Toolbar */}
       <div className="accessibility-toolbar fixed left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-lg shadow-lg z-40 p-3 flex flex-col space-y-3">
         <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Increase Font Size">
-          <TextHeight size={20} />
+          <Type size={20} />
         </button>
         <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="High Contrast">
           <CircleDot size={20} />
         </button>
         <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Text to Speech">
-          <VolumeUp size={20} />
+          <Volume size={20} />
         </button>
         <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Sign Language">
           <Languages size={20} />
@@ -156,7 +156,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center">
                     <div className="w-12 h-12 rounded-full bg-emerald flex items-center justify-center text-white">
-                      <HandsHelping size={24} />
+                      <HandHelping size={24} />
                     </div>
                     <span className="ml-3 font-medium">Inclusion</span>
                   </div>
