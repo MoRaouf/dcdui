@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				award: {
+					dark: '#1A1F2C',
+					gold: '#D4AF37',
+					silver: '#C0C0C0',
+					bronze: '#CD7F32',
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'shimmer': {
+					'0%': {
+						backgroundPosition: '-500px 0',
+					},
+					'100%': {
+						backgroundPosition: '500px 0',
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'shimmer': 'shimmer 2.5s infinite linear'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Georgia', 'serif'],
+				display: ['Montserrat', 'sans-serif'],
 			}
 		}
 	},
