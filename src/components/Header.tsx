@@ -57,7 +57,6 @@ const Header = () => {
           <NavLink to="/eligibility" label="Eligibility" isActive={currentPath === '/eligibility'} />
           <NavLink to="/apply" label="How to Apply" isActive={currentPath === '/apply'} />
           <NavLink to="/faq" label="FAQ" isActive={currentPath === '/faq'} />
-          <NavLink to="/contact" label="Contact" isActive={currentPath === '/contact'} />
         </nav>
         
         {/* Right Side Controls */}
@@ -93,7 +92,6 @@ const Header = () => {
             <Link to="/eligibility" className={`py-2 ${currentPath === '/eligibility' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Eligibility</Link>
             <Link to="/apply" className={`py-2 ${currentPath === '/apply' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>How to Apply</Link>
             <Link to="/faq" className={`py-2 ${currentPath === '/faq' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>FAQ</Link>
-            <Link to="/contact" className={`py-2 ${currentPath === '/contact' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Contact</Link>
             <Link to="/apply" className="py-2 px-4 bg-dcd-purple text-white rounded-lg font-bold text-center mt-2">
               Apply Now
             </Link>
