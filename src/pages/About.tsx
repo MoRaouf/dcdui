@@ -1,12 +1,12 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Building, GraduationCap, Accessibility, FileText, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Layout from '@/components/Layout';
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <Layout>
       {/* Page Header */}
       <section id="page-header" className="bg-dcd-purple text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
@@ -354,7 +354,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Layout>
   );
 };
 
