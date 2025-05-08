@@ -71,8 +71,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Accessibility Toolbar */}
-      <div className="accessibility-toolbar fixed left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-lg shadow-lg z-40 p-3 flex flex-col space-y-3">
+      {/* Accessibility Toolbar - Fixed width and position instead of full width */}
+      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-lg shadow-lg z-40 p-3 flex flex-col space-y-3 w-auto">
         <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Increase Font Size">
           <Type size={20} />
         </button>
