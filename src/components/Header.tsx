@@ -15,8 +15,16 @@ const NavLink = ({ to, label, isActive = false }: NavLinkProps) => {
   const activeClasses = "text-dcd-purple";
   const inactiveClasses = "text-charcoal hover:text-dcd-purple";
   
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
   return (
-    <Link to={to} className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}>
+    <Link 
+      to={to} 
+      className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+      onClick={handleClick}
+    >
       {label}
     </Link>
   );
@@ -30,6 +38,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
   // Get current path to determine active link
   const currentPath = location.pathname;
   
@@ -38,7 +50,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo and Title */}
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center" onClick={handleNavClick}>
             <div className="w-12 h-12 bg-dcd-purple rounded-lg flex items-center justify-center text-white">
               <span className="font-bold text-xl">DAMJ</span>
             </div>
@@ -67,7 +79,11 @@ const Header = () => {
           </button>
           
           {/* Apply Now Button */}
-          <Link to="/apply" className="hidden md:inline-block px-4 py-2 bg-dcd-purple text-white rounded-lg font-bold hover:bg-dcd-purple-dark transition cursor-pointer">
+          <Link 
+            to="/apply" 
+            className="hidden md:inline-block px-4 py-2 bg-dcd-purple text-white rounded-lg font-bold hover:bg-dcd-purple-dark transition cursor-pointer"
+            onClick={handleNavClick}
+          >
             Apply Now
           </Link>
           
@@ -86,13 +102,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 py-4 px-4 shadow-md">
           <nav className="flex flex-col space-y-3">
-            <Link to="/" className={`py-2 ${currentPath === '/' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Home</Link>
-            <Link to="/about" className={`py-2 ${currentPath === '/about' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>About</Link>
-            <Link to="/categories" className={`py-2 ${currentPath === '/categories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Categories</Link>
-            <Link to="/eligibility" className={`py-2 ${currentPath === '/eligibility' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Eligibility</Link>
-            <Link to="/apply" className={`py-2 ${currentPath === '/apply' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>How to Apply</Link>
-            <Link to="/faq" className={`py-2 ${currentPath === '/faq' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>FAQ</Link>
-            <Link to="/apply" className="py-2 px-4 bg-dcd-purple text-white rounded-lg font-bold text-center mt-2">
+            <Link to="/" onClick={handleNavClick} className={`py-2 ${currentPath === '/' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Home</Link>
+            <Link to="/about" onClick={handleNavClick} className={`py-2 ${currentPath === '/about' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>About</Link>
+            <Link to="/categories" onClick={handleNavClick} className={`py-2 ${currentPath === '/categories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Categories</Link>
+            <Link to="/eligibility" onClick={handleNavClick} className={`py-2 ${currentPath === '/eligibility' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Eligibility</Link>
+            <Link to="/apply" onClick={handleNavClick} className={`py-2 ${currentPath === '/apply' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>How to Apply</Link>
+            <Link to="/faq" onClick={handleNavClick} className={`py-2 ${currentPath === '/faq' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>FAQ</Link>
+            <Link to="/apply" onClick={handleNavClick} className="py-2 px-4 bg-dcd-purple text-white rounded-lg font-bold text-center mt-2">
               Apply Now
             </Link>
           </nav>
