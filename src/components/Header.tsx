@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
@@ -24,13 +24,14 @@ const NavLink = ({ to, label, isActive = false }: NavLinkProps) => {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   
   // Get current path to determine active link
-  const currentPath = window.location.pathname;
+  const currentPath = location.pathname;
   
   return (
     <header id="header" className="fixed top-0 w-full bg-white shadow-md z-50">
@@ -86,13 +87,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 py-4 px-4 shadow-md">
           <nav className="flex flex-col space-y-3">
-            <Link to="/" className="py-2 text-charcoal hover:text-dcd-purple font-medium">Home</Link>
-            <Link to="/about" className="py-2 text-dcd-purple font-medium">About</Link>
-            <Link to="/categories" className="py-2 text-charcoal hover:text-dcd-purple font-medium">Categories</Link>
-            <Link to="/apply" className="py-2 text-charcoal hover:text-dcd-purple font-medium">Apply</Link>
-            <Link to="/success-stories" className="py-2 text-charcoal hover:text-dcd-purple font-medium">Success Stories</Link>
-            <Link to="/faq" className="py-2 text-charcoal hover:text-dcd-purple font-medium">FAQ</Link>
-            <Link to="/contact" className="py-2 text-charcoal hover:text-dcd-purple font-medium">Contact</Link>
+            <Link to="/" className={`py-2 ${currentPath === '/' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Home</Link>
+            <Link to="/about" className={`py-2 ${currentPath === '/about' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>About</Link>
+            <Link to="/categories" className={`py-2 ${currentPath === '/categories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Categories</Link>
+            <Link to="/apply" className={`py-2 ${currentPath === '/apply' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Apply</Link>
+            <Link to="/success-stories" className={`py-2 ${currentPath === '/success-stories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Success Stories</Link>
+            <Link to="/faq" className={`py-2 ${currentPath === '/faq' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>FAQ</Link>
+            <Link to="/contact" className={`py-2 ${currentPath === '/contact' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Contact</Link>
             <Link to="/apply" className="py-2 px-4 bg-dcd-purple text-white rounded-lg font-bold text-center mt-2">
               Apply Now
             </Link>
