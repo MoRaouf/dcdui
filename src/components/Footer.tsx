@@ -51,8 +51,8 @@ const Footer = () => {
               <li><Link to="/about" className="text-gray-400 hover:text-white transition">About the Award</Link></li>
               <li><Link to="/categories" className="text-gray-400 hover:text-white transition">Award Categories</Link></li>
               <li><Link to="/apply" className="text-gray-400 hover:text-white transition">How to Apply</Link></li>
-              <li><Link to="/success-stories" className="text-gray-400 hover:text-white transition">Success Stories</Link></li>
-              <li><Link to="/news" className="text-gray-400 hover:text-white transition">News & Updates</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">Success Stories</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">News & Updates</Link></li>
             </ul>
           </div>
           
@@ -60,12 +60,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/resources/guide" className="text-gray-400 hover:text-white transition">Application Guide</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">Application Guide</Link></li>
               <li><Link to="/eligibility" className="text-gray-400 hover:text-white transition">Eligibility Criteria</Link></li>
               <li><Link to="/faq" className="text-gray-400 hover:text-white transition">Frequently Asked Questions</Link></li>
-              <li><Link to="/resources/accessibility" className="text-gray-400 hover:text-white transition">Accessibility Guidelines</Link></li>
-              <li><Link to="/winners" className="text-gray-400 hover:text-white transition">Previous Winners</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact Support</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">Accessibility Guidelines</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">Previous Winners</Link></li>
+              <li><Link to="#" className="text-gray-400 hover:text-white transition">Contact Support</Link></li>
             </ul>
           </div>
           
