@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { 
   Award, 
@@ -24,6 +25,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FAQItem from "@/components/FAQItem";
+import Layout from '@/components/Layout';
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
@@ -57,70 +59,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Fixed Header */}
-      <header className="fixed top-0 w-full bg-white shadow-md z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo and Title */}
-          <div className="flex items-center">
-            <div className="w-12 h-12 bg-dcd-purple rounded-lg flex items-center justify-center text-white">
-              <span className="font-bold text-xl">DAMJ</span>
-            </div>
-            <div className="ml-3">
-              <h1 className="text-lg font-bold text-charcoal hidden md:block">Abu Dhabi Excellence Award</h1>
-              <p className="text-sm text-dcd-purple hidden md:block">People of Determination Inclusion</p>
-            </div>
-          </div>
-          
-          {/* Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">Home</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">About</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">Categories</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">Apply</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">Success Stories</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">FAQ</span>
-            <span className="text-charcoal hover:text-dcd-purple font-medium transition cursor-pointer">Contact</span>
-          </nav>
-          
-          {/* Right Side Controls */}
-          <div className="flex items-center space-x-4">
-            {/* Language Toggle */}
-            <button className="px-3 py-1 border border-dcd-purple text-dcd-purple rounded-md text-sm font-medium hover:bg-dcd-purple hover:text-white transition">
-              عربي
-            </button>
-            
-            {/* Apply Now Button */}
-            <span className="hidden md:inline-block px-4 py-2 bg-dcd-purple text-white rounded-lg font-bold hover:bg-dcd-purple-dark transition cursor-pointer">
-              Apply Now
-            </span>
-            
-            {/* Mobile Menu Button */}
-            <button className="lg:hidden text-charcoal">
-              <Menu />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Accessibility Toolbar - Fixed width and position instead of full width */}
-      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-lg shadow-lg z-40 p-3 flex flex-col space-y-3 w-auto">
-        <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Increase Font Size">
-          <Type size={20} />
-        </button>
-        <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="High Contrast">
-          <CircleDot size={20} />
-        </button>
-        <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Text to Speech">
-          <Volume size={20} />
-        </button>
-        <button className="w-10 h-10 bg-soft-beige rounded-full flex items-center justify-center text-dcd-purple hover:bg-sky-blue hover:text-white transition" title="Sign Language">
-          <Languages size={20} />
-        </button>
-      </div>
-
-      {/* Main Content - With top padding to account for fixed header */}
-      <main className="pt-20">
+    <Layout>
+      {/* Main Content */}
+      <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative bg-dcd-purple text-white">
           <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
@@ -674,113 +615,8 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-charcoal text-white pt-12 pb-6">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-              {/* Column 1 */}
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-dcd-purple rounded-lg flex items-center justify-center text-white">
-                    <span className="font-bold text-xl">DAMJ</span>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="font-bold">Abu Dhabi Excellence Award</h3>
-                  </div>
-                </div>
-                <p className="text-gray-400 mb-4">Recognizing and celebrating organizations that champion inclusion and accessibility for People of Determination in Abu Dhabi.</p>
-                <div className="flex space-x-4">
-                  <span className="text-gray-400 hover:text-white transition cursor-pointer">
-                    <Twitter size={20} />
-                  </span>
-                  <span className="text-gray-400 hover:text-white transition cursor-pointer">
-                    <Instagram size={20} />
-                  </span>
-                  <span className="text-gray-400 hover:text-white transition cursor-pointer">
-                    <Linkedin size={20} />
-                  </span>
-                  <span className="text-gray-400 hover:text-white transition cursor-pointer">
-                    <Youtube size={20} />
-                  </span>
-                </div>
-              </div>
-              
-              {/* Column 2 */}
-              <div>
-                <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Home</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">About the Award</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Award Categories</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">How to Apply</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Success Stories</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">News & Updates</span></li>
-                </ul>
-              </div>
-              
-              {/* Column 3 */}
-              <div>
-                <h3 className="text-lg font-bold mb-4">Resources</h3>
-                <ul className="space-y-2">
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Application Guide</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Eligibility Criteria</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Frequently Asked Questions</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Accessibility Guidelines</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Previous Winners</span></li>
-                  <li><span className="text-gray-400 hover:text-white transition cursor-pointer">Contact Support</span></li>
-                </ul>
-              </div>
-              
-              {/* Column 4 */}
-              <div>
-                <h3 className="text-lg font-bold mb-4">Subscribe</h3>
-                <p className="text-gray-400 mb-4">Stay updated with the latest news about the award and inclusion initiatives.</p>
-                <form className="mb-4">
-                  <div className="flex">
-                    <input type="email" className="w-full p-3 bg-[#444444] border-none rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Your email" />
-                    <button type="submit" className="bg-gold text-charcoal px-4 rounded-r-lg font-bold hover:bg-opacity-90 transition">
-                      <Send size={20} />
-                    </button>
-                  </div>
-                </form>
-                <div className="flex items-center space-x-2">
-                  <img src="https://via.placeholder.com/40x25" alt="Abu Dhabi Government" className="h-6" />
-                  <img src="https://via.placeholder.com/40x25" alt="DCD" className="h-6" />
-                </div>
-              </div>
-            </div>
-            
-            <div className="pt-6 border-t border-gray-700 text-center text-gray-400 text-sm">
-              <div className="flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2025 Department of Community Development, Abu Dhabi. All Rights Reserved.</p>
-                <div className="flex space-x-4 mt-4 md:mt-0">
-                  <span className="hover:text-white transition cursor-pointer">Privacy Policy</span>
-                  <span className="hover:text-white transition cursor-pointer">Terms of Use</span>
-                  <span className="hover:text-white transition cursor-pointer">Accessibility Statement</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </main>
-    </div>
-import React from 'react';
-import Layout from '@/components/Layout';
-
-const Index = () => {
-  return (
-    <Layout>
-      {/* Your existing Index page content */}
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-dcd-purple">Welcome to Abu Dhabi Excellence Award</h1>
-        <p className="mt-4">This is the homepage content.</p>
       </div>
     </Layout>
-  );
-};
-
-export default Index;
   );
 };
 
