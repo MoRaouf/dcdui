@@ -54,7 +54,7 @@ const Header = () => {
           <NavLink to="/" label="Home" isActive={currentPath === '/'} />
           <NavLink to="/about" label="About" isActive={currentPath === '/about'} />
           <NavLink to="/categories" label="Categories" isActive={currentPath === '/categories'} />
-          <NavLink to="/apply" label="Apply" isActive={currentPath === '/apply'} />
+          <NavLink to="/eligibility" label="Eligibility" isActive={currentPath === '/eligibility'} />
           <NavLink to="/success-stories" label="Success Stories" isActive={currentPath === '/success-stories'} />
           <NavLink to="/faq" label="FAQ" isActive={currentPath === '/faq'} />
           <NavLink to="/contact" label="Contact" isActive={currentPath === '/contact'} />
@@ -90,7 +90,7 @@ const Header = () => {
             <Link to="/" className={`py-2 ${currentPath === '/' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Home</Link>
             <Link to="/about" className={`py-2 ${currentPath === '/about' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>About</Link>
             <Link to="/categories" className={`py-2 ${currentPath === '/categories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Categories</Link>
-            <Link to="/apply" className={`py-2 ${currentPath === '/apply' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Apply</Link>
+            <Link to="/eligibility" className={`py-2 ${currentPath === '/eligibility' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Eligibility</Link>
             <Link to="/success-stories" className={`py-2 ${currentPath === '/success-stories' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Success Stories</Link>
             <Link to="/faq" className={`py-2 ${currentPath === '/faq' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>FAQ</Link>
             <Link to="/contact" className={`py-2 ${currentPath === '/contact' ? 'text-dcd-purple' : 'text-charcoal hover:text-dcd-purple'} font-medium`}>Contact</Link>
